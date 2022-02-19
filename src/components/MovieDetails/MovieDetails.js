@@ -19,7 +19,7 @@ export function MovieDetails({ details }) {
           <Title>
             {title} ({year})
           </Title>
-          <p>Оценка пользователей: {votes}</p>
+          <p>Рекомендуют: {votes}</p>
           <h2>Обзор</h2>
           <p>{desc}</p>
           <h2>Жанры</h2>
