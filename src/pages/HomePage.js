@@ -13,7 +13,7 @@ export function HomePage() {
 
   return (
     <>
-      <PageTitle text="Trending today" />
+      <PageTitle text="Сегодня в тренде" />
       {isLoading ? (
         <Loader />
       ) : isError ? (
