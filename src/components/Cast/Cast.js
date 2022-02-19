@@ -3,7 +3,7 @@ import { Wrapper, Card, ImgBox, Img, Name, Character } from './Cast.styled';
 
 export function Cast({ data }) {
   if (data.length === 0) {
-    return <p>There is no information about the cast.</p>;
+    return <p>Информация об актерском составе отсутствует.</p>;
   }
 
   return (
@@ -15,7 +15,7 @@ export function Cast({ data }) {
           </ImgBox>
           <div>
             <Name>{name}</Name>
-            {character && <Character>as {character}</Character>}
+            {character && <Character>в роли {character}</Character>}
           </div>
         </Card>
       ))}

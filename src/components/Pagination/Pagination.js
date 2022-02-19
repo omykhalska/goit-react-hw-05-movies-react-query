@@ -10,7 +10,7 @@ export function Pagination({
   return (
     <PaginationWrapper>
       <PageBtn
-        aria-label="Previous page"
+        aria-label="Предыдущая страница"
         type="button"
         onClick={onPrevPageBtnClick}
         disabled={page === 1}
@@ -19,7 +19,7 @@ export function Pagination({
       </PageBtn>
       <CurrentPage>{page}</CurrentPage>
       <PageBtn
-        aria-label="Next page"
+        aria-label="Следующая страница"
         type="button"
         onClick={onNextPageBtnClick}
         disabled={page === total}

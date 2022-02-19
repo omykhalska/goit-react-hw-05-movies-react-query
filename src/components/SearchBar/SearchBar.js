@@ -10,7 +10,7 @@ export function SearchBar({ onFormSubmit }) {
         type="text"
         name="query"
         autoComplete="off"
-        placeholder="Search movies"
+        placeholder="Поиск фильмов"
       />
       <SearchBtn type="submit" aria-label="search">
         <FaSearch />

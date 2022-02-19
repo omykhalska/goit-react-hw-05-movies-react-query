@@ -7,7 +7,7 @@ export function GoBackButton({ location }) {
 
   return (
     <Button onClick={() => navigate(location?.state?.from ?? '/movies')}>
-      ← Go back
+      ← Назад
     </Button>
   );
 }

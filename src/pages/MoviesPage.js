@@ -40,6 +40,7 @@ export function MoviesPage() {
       query,
       page: Math.max(page - 1, 1),
     });
+    window.scrollTo(0, 0);
   }
 
   function onNextPageBtnClick() {
@@ -47,6 +48,7 @@ export function MoviesPage() {
       query,
       page: page + 1,
     });
+    window.scrollTo(0, 0);
   }
 
   function renderOnSuccess() {

@@ -19,22 +19,22 @@ export function MovieDetails({ details }) {
           <Title>
             {title} ({year})
           </Title>
-          <p>User Score: {votes}</p>
-          <h2>Overview</h2>
+          <p>Оценка пользователей: {votes}</p>
+          <h2>Обзор</h2>
           <p>{desc}</p>
-          <h2>Genres</h2>
+          <h2>Жанры</h2>
           <p>{genres}</p>
         </div>
       </CardWrapper>
       <hr />
-      <h3>Additional information</h3>
+      <h3>Дополнительная информация</h3>
       <ul>
         <li>
           <Link
             to={`/movies/${movieId}/cast`}
             state={location?.state && { from: location.state.from }}
           >
-            Cast
+            Актерский состав
           </Link>
         </li>
         <li>
@@ -42,7 +42,7 @@ export function MovieDetails({ details }) {
             to={`/movies/${movieId}/reviews`}
             state={location?.state && { from: location.state.from }}
           >
-            Reviews
+            Рецензии
           </Link>
         </li>
       </ul>

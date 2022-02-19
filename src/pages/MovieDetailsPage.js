@@ -23,15 +23,17 @@ export function MovieDetailsPage() {
         genres,
       }) => ({
         title,
-        desc: overview ? overview : 'There is no overview',
+        desc: overview ? overview : 'Обзор отсутствует.',
         img: poster_path
           ? 'https://image.tmdb.org/t/p/w500' + poster_path
           : imgPlaceholder,
-        year: release_date ? release_date.slice(0, 4) : 'year n/a',
-        votes: vote_average ? vote_average * 10 + '%' : 'no rating yet',
+        year: release_date ? release_date.slice(0, 4) : 'неизвестно',
+        votes: vote_average
+          ? vote_average * 10 + '%'
+          : 'пока никто не оценил этот фильм.',
         genres:
           genres.length === 0
-            ? 'Genres not defined.'
+            ? 'Жанры не определены.'
             : genres.map(genre => genre.name).join(', '),
       }),
     },
