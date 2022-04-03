@@ -15,7 +15,7 @@ export function Cast({ data }) {
           </ImgBox>
           <div>
             <Name>{name}</Name>
-            {character && <Character>в роли {character}</Character>}
+            {character && <Character>как {character}</Character>}
           </div>
         </Card>
       ))}

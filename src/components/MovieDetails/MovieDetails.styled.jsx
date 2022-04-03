@@ -20,3 +20,11 @@ export const Img = styled.img`
   width: 100%;
   height: auto;
 `;
+
+export const PlayerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+`;

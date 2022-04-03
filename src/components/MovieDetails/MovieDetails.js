@@ -1,10 +1,17 @@
 import PropTypes from 'prop-types';
 import { Outlet, Link, useParams, useLocation } from 'react-router-dom';
-import { CardWrapper, ImgBox, Img, Title } from './MovieDetails.styled';
+import ReactPlayer from 'react-player';
+import {
+  CardWrapper,
+  ImgBox,
+  Img,
+  Title,
+  PlayerWrapper,
+} from './MovieDetails.styled';
 import { GoBackButton } from '../GoBackButton';
 
 export function MovieDetails({ details }) {
-  const { title, desc, img, year, votes, genres } = details;
+  const { title, desc, img, year, votes, genres, videos } = details;
   let { movieId } = useParams();
   const location = useLocation();
 
@@ -27,6 +34,20 @@ export function MovieDetails({ details }) {
         </div>
       </CardWrapper>
       <hr />
+      {videos.length > 0 && (
+        <>
+          <PlayerWrapper>
+            {videos.map(video => (
+              <ReactPlayer
+                key={video.id}
+                url={`https://www.youtube.com/watch?v=${video.key}`}
+                controls
+              />
+            ))}
+          </PlayerWrapper>
+          <hr />
+        </>
+      )}
       <h3>Дополнительная информация</h3>
       <ul>
         <li>
@@ -60,5 +81,6 @@ MovieDetails.propTypes = {
     year: PropTypes.string,
     votes: PropTypes.string,
     genres: PropTypes.string,
+    videos: PropTypes.array,
   }).isRequired,
 };

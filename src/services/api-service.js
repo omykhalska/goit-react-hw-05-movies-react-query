@@ -10,7 +10,7 @@ export async function fetchPopularMovies() {
 }
 
 export async function fetchMovieById(movieId) {
-  const url = `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=ru-RU`;
+  const url = `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=ru-RU&append_to_response=videos`;
   const { data } = await axios(url);
   return data;
 }

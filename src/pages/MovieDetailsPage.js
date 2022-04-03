@@ -21,6 +21,7 @@ export function MovieDetailsPage() {
         release_date,
         vote_average,
         genres,
+        videos,
       }) => ({
         title,
         desc: overview ? overview : 'Обзор отсутствует.',
@@ -35,6 +36,15 @@ export function MovieDetailsPage() {
           genres.length === 0
             ? 'Жанры не определены.'
             : genres.map(genre => genre.name).join(', '),
+        videos:
+          videos.results.length > 0
+            ? videos.results
+                .filter(video => video.official === true)
+                .map(video => ({
+                  id: video.id,
+                  key: video.key,
+                }))
+            : [],
       }),
     },
   );
