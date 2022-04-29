@@ -7,4 +7,5 @@ export const Header = styled.header`
 
 export const Main = styled.main`
   padding: 8px 24px;
+  background: bisque;
 `;
